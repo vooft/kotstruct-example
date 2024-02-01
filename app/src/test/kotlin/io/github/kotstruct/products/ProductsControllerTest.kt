@@ -2,7 +2,7 @@ package io.github.kotstruct.products
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import io.github.kotstruct.example.ProductModel
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
@@ -14,6 +14,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.content
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 import java.time.Instant
+import java.time.temporal.ChronoUnit.MILLIS
 import java.util.UUID
 
 @SpringBootTest
@@ -35,8 +36,8 @@ class ProductsControllerTest {
             id = UUID.randomUUID(),
             name = "test123",
             price = 100,
-            updatedAt = Instant.now(),
-            createdAt = Instant.now()
+            updatedAt = Instant.now().truncatedTo(MILLIS),
+            createdAt = Instant.now().truncatedTo(MILLIS)
         )
 
         repository.insert(model)

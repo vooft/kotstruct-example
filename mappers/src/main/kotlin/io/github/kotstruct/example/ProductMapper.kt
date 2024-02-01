@@ -10,6 +10,7 @@ import org.jooq.generated.tables.records.ProductsRecord
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
+import java.time.temporal.ChronoUnit.MILLIS
 import java.util.UUID
 
 @KotStructDescribedBy(ProductMapperDescriptor::class)
@@ -36,7 +37,7 @@ object ProductMapperDescriptor : KotStructDescriptor by kotStruct({
 object ProductRequestToModelMapperDescriptor : KotStructDescriptor by kotStruct({
     mappingFor<ProductRequestDto, ProductModel> {
         mapFactory { UUID.randomUUID() } into { ProductModel::id }
-        mapFactory { Instant.now() } into { ProductModel::createdAt }
-        mapFactory { Instant.now() } into { ProductModel::updatedAt }
+        mapFactory { Instant.now().truncatedTo(MILLIS) } into { ProductModel::createdAt }
+        mapFactory { Instant.now().truncatedTo(MILLIS) } into { ProductModel::updatedAt }
     }
 })

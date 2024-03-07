@@ -1,5 +1,5 @@
 [versions]
-kotlin = "1.9.22"
+kotlin = "1.9.23"
 jooq = "3.19.3"
 kotstruct = "0.0.6"
 

@@ -11,7 +11,7 @@ kotlin-plugin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref 
 
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
-spring-boot = { id = "org.springframework.boot", version = "3.2.3" }
+spring-boot = { id = "org.springframework.boot", version = "3.2.4" }
 
 jooq = { id = "org.jooq.jooq-codegen-gradle", version.ref = "jooq" }
 

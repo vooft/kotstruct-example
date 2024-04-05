@@ -1,6 +1,6 @@
 [versions]
 kotlin = "1.9.23"
-jooq = "3.19.3"
+jooq = "3.19.7"
 kotstruct = "0.0.6"
 
 ksp = "1.9.22-1.0.17"

@@ -3,7 +3,7 @@ kotlin = "1.9.24"
 jooq = "3.19.8"
 kotstruct = "0.0.6"
 
-ksp = "1.9.24-1.0.20"
+ksp = "2.0.0-1.0.21"
 
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }

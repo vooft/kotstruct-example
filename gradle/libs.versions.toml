@@ -15,7 +15,7 @@ spring-boot = { id = "org.springframework.boot", version = "3.3.0" }
 
 jooq = { id = "org.jooq.jooq-codegen-gradle", version.ref = "jooq" }
 
-openapi = { id = "org.openapi.generator", version = "7.6.0" }
+openapi = { id = "org.openapi.generator", version = "7.7.0" }
 
 [libraries]
 
